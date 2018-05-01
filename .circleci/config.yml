@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/mymarkdown
+deployment:
+  deploy:
+    branch: master
+    commands:
+      - firebase deploy --project "$FIREBASE_PJ" --token "$FIREBASE_TOKEN"
